@@ -7,7 +7,7 @@
 function startExp(formlink)
 {
 // enter the pagename of the MouselabWEB page below
-linkstr = "Jaimie Exp.html";
+linkstr = "StudentCharityQuestion.html";
 
 // get values from form
 subject = formlink.subject.value;
@@ -28,7 +28,7 @@ var newWind = window.location.href = linkstr;
 <h1>Start of experiment</h1>
 <form>
   <TABLE><TR><TD>Subject name:</TD><TD><input name="subject" type="text" id="subject"></TD></TR>
-      <TR><TD>condition number:</TD><TD><input name="condnum" type="text" id="condnum" size="10"></TD></TR> 
+      <TR><TD>Worker ID:</TD><TD><input name="condnum" type="text" id="condnum" size="10"></TD></TR> 
   <TR><TD colspan=2><input type="button" name="Button" value="Start Experiment" onClick="startExp(this.form)"></TD></TR></TABLE>
 </form>
 

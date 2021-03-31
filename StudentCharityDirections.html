@@ -1,0 +1,40 @@
+<HTML>
+<HEAD>
+<TITLE>MouselabWEB survey</TITLE>
+<script language=javascript src="mlweb2.js"></SCRIPT>
+<link rel="stylesheet" href="mlweb.css" type="text/css">
+</head>
+
+<body onLoad="timefunction('onload','body','body')">
+<!--BEGIN set vars--><script language="javascript">
+//override defaults
+mlweb_outtype="CSV";
+mlweb_fname="mlwebform";
+
+chkFrm=true;
+warningTxt="You must answer the question before proceeding!";
+</SCRIPT>
+<!--END set vars-->
+
+<FORM name="mlwebform" method="POST" onSubmit="return checkForm(this)" action="http://www.mouselabweb.org/mlwebmailer.php">
+<INPUT type=hidden name="procdata" value="">
+<!-- set all variables here -->
+<input type=hidden name="expname" value="StudentCharityQuestion">
+<input type=hidden name="nextURL" value="https://nghinton.github.io/JaimieExperiment/StudentCharityMatrix.html">
+<input type=hidden name="to_email" value="nghinton@crimson.ua.edu">
+<!--these will be set by the script -->
+<input type=hidden name="subject" value="<?php echo($subject)?>">
+<input type=hidden name="condnum" value="<?php echo($condnum)?>">
+<!--BEGIN preHTML-->
+<h2>Question 1: Student Charity</h2>
+<!--END preHTML--><!--BEGIN postHTML-->
+
+<p>Decision Scenario 1</p>
+<p>You are trying to donate a portion of your salary to a child in need. When you went to a donation center to deliver your hard-earned money, they told you that you can actually choose a specific child to support. You learn that there are 5 children whom you can directly support, but you soon realized that you would have to only choose one child to fully support. The donation center provides some helpful information to help you make a decision:</p>
+<p>The child’s IQ is related to willingness to learn. This attribute is important because high score on this attribute indicates the more impact the child can make as an adult in helping others in his/her community.</p>
+<p>The child’s age is important because you can develop a better relationship with the child through correspondence.</p>
+<p>The child’s personality is considered important because better score on this would mean more likeliness to help others in the community.</p>
+<p>Family size is important because the entire family can directly benefit from your donation. </p>
+<p>Living conditions are important because you can choose to help a child living in relatively worse conditions, who is more likely in need of more help than others.</p>
+
+<!--END postHTML--><INPUT type="submit" value="Next Question"></FORM></body></html>
