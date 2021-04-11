@@ -23,8 +23,8 @@ warningTxt="You must answer the question before proceeding!";
 <input type=hidden name="nextURL" value="https://nghinton.github.io/JaimieExperiment/StudentCharitySurvey.html">
 <input type=hidden name="to_email" value="nghinton@crimson.ua.edu">
 <!--these will be set by the script -->
-<input type=hidden name="subject" value="<?php echo($subject)?>">
-<input type=hidden name="condnum" value="<?php echo($condnum)?>">
+<input type=hidden name="subject" value=document.cookie.substr(document.cookie.indexOf("mlweb_subject=")+14)>
+<input type=hidden name="condnum" value=document.cookie.substr(document.cookie.indexOf("mlweb_condnum=")+14)>
 <!--BEGIN preHTML-->
 <h2>Question 1: Student Charity</h2>
 <!--END preHTML--><!--BEGIN postHTML-->
