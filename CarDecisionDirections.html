@@ -1,0 +1,49 @@
+<HTML>
+    <HEAD>
+    <TITLE>MouselabWEB survey</TITLE>
+    <script language=javascript src="mlweb2.js"></SCRIPT>
+    <link rel="stylesheet" href="mlweb.css" type="text/css">
+    </head>
+    
+    <body onLoad="timefunction('onload','body','body')">
+    <!--BEGIN set vars--><script language="javascript">
+    //override defaults
+    mlweb_outtype="CSV";
+    mlweb_fname="mlwebform";
+    
+    chkFrm=true;
+    warningTxt="You must answer the question before proceeding!";
+    </SCRIPT>
+    <!--END set vars-->
+    
+    <FORM name="mlwebform" method="POST" onSubmit="" action="http://www.mouselabweb.org/mlwebmailer.php">
+    <INPUT type=hidden name="procdata" value="">
+    <!-- set all variables here -->
+    <input type=hidden name="expname" value="CarDecisionQuestion">
+    <input type=hidden name="nextURL" value="https://nghinton.github.io/JaimieExperiment/CarDecisionMatrix.html">
+    <input type=hidden name="to_email" value="nghinton@crimson.ua.edu">
+    <!--these will be set by the script -->
+    <input type=hidden name="subject" value="<?php echo($subject)?>">
+    <input type=hidden name="condnum" value="<?php echo($condnum)?>">
+    <!--BEGIN preHTML-->
+    <h2>Question 2: Car Decision</h2>
+    <!--END preHTML--><!--BEGIN postHTML-->
+    
+    <p>Decision Scenario 2</p>
+    <p>After your reliable vehicle broke down, you are trying to decide which car to purchase. You went to a dealership and learned that there are 5 cars available. Because you need the car urgently, you decide to purchase one of them. The dealership provided the following information for each car:</p>
+
+    <p>Price:</p>
+    <p>The price of the car is considered important because you are trying to buy the most affordable car with as many desired traits as you want</p>
+
+    <p>Occupant Survival Rate:</p>
+    <p>The occupant survival rate is considered important because you are trying to make sure that the car can guarantee better safety even when you get in an accident. </p>
+
+    <p>Trunk Space:</p>
+    <p>The trunk space is considered important because you often find yourself having to carry various items/ tools/ bags with you.</p>
+
+    <p>Pollution / MPG:</p>
+    <p>Pollution emission is considered important because you are trying to be conscious of the environment.</p>
+
+    <p>Please consider all information carefully, as all information provided here is important in making a good decision</p>
+    
+    <!--END postHTML--><INPUT type="submit" value="Go To Decision Matrix"></FORM></body></html>

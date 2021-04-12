@@ -1,0 +1,44 @@
+<HTML>
+    <HEAD>
+    <TITLE>MouselabWEB survey</TITLE>
+    <script language=javascript src="mlweb2.js"></SCRIPT>
+    <link rel="stylesheet" href="mlweb.css" type="text/css">
+    </head>
+    
+    <body onLoad="timefunction('onload','body','body')">
+    <!--BEGIN set vars--><script language="javascript">
+    //override defaults
+    mlweb_outtype="CSV";
+    mlweb_fname="mlwebform";
+    
+    chkFrm=true;
+    warningTxt="You must answer the question before proceeding!";
+    </SCRIPT>
+    <!--END set vars-->
+    
+    <FORM name="mlwebform" method="POST" onSubmit="" action="http://www.mouselabweb.org/mlwebmailer.php">
+    <INPUT type=hidden name="procdata" value="">
+    <!-- set all variables here -->
+    <input type=hidden name="expname" value="Practice1Question">
+    <input type=hidden name="nextURL" value="https://nghinton.github.io/JaimieExperiment/Practice1Matrix.html">
+    <input type=hidden name="to_email" value="nghinton@crimson.ua.edu">
+    <!--these will be set by the script -->
+    <input type=hidden name="subject" value="<?php echo($subject)?>">
+    <input type=hidden name="condnum" value="<?php echo($condnum)?>">
+    <!--BEGIN preHTML-->
+    <h2>Practice Question 1: Birthday Cake</h2>
+    <!--END preHTML--><!--BEGIN postHTML-->
+    
+    <p>Practice Scenario 1</p>
+    <p>You are trying to choose a cake that you want to buy for your friend’s birthday. You are considering the following traits:</p>
+    
+    <p>Sweetness:</p>
+    <p>This is important because you know your friend’s taste and you want to make sure the cake has the perfect amount of sweetness</p>
+    <p>Design:</p>
+    <p>This is important because you want to make sure the cake is pleasing to look at</p>
+    <p>Size:</p>
+    <p>This is important because you want to buy the perfect size of the cake that will feed everyone but won’t leave too much leftover.</p>
+    
+    <p>Please consider all information carefully, as all information provided here is important in making a good decision</p>
+    
+    <!--END postHTML--><INPUT type="submit" value="Go To Decision Matrix"></FORM></body></html>
