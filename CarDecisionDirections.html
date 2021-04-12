@@ -5,29 +5,9 @@
     <link rel="stylesheet" href="mlweb.css" type="text/css">
     </head>
     
-    <body onLoad="timefunction('onload','body','body')">
-    <!--BEGIN set vars--><script language="javascript">
-    //override defaults
-    mlweb_outtype="CSV";
-    mlweb_fname="mlwebform";
+    <body >
     
-    chkFrm=true;
-    warningTxt="You must answer the question before proceeding!";
-    </SCRIPT>
-    <!--END set vars-->
-    
-    <FORM name="mlwebform" method="POST" onSubmit="" action="http://www.mouselabweb.org/mlwebmailer.php">
-    <INPUT type=hidden name="procdata" value="">
-    <!-- set all variables here -->
-    <input type=hidden name="expname" value="CarDecisionQuestion">
-    <input type=hidden name="nextURL" value="https://nghinton.github.io/JaimieExperiment/CarDecisionMatrix.html">
-    <input type=hidden name="to_email" value="nghinton@crimson.ua.edu">
-    <!--these will be set by the script -->
-    <input type=hidden name="subject" value="<?php echo($subject)?>">
-    <input type=hidden name="condnum" value="<?php echo($condnum)?>">
-    <!--BEGIN preHTML-->
     <h2>Question 2: Car Decision</h2>
-    <!--END preHTML--><!--BEGIN postHTML-->
     
     <p>Decision Scenario 2</p>
     <p>After your reliable vehicle broke down, you are trying to decide which car to purchase. You went to a dealership and learned that there are 5 cars available. Because you need the car urgently, you decide to purchase one of them. The dealership provided the following information for each car:</p>
@@ -46,4 +26,14 @@
 
     <p>Please consider all information carefully, as all information provided here is important in making a good decision</p>
     
-    <!--END postHTML--><INPUT type="submit" value="Go To Decision Matrix"></FORM></body></html>
+    <button id="myButton" class="float-left submit-button" >Go To Decision Matrix</button>
+
+    </body>
+        
+        <script type="text/javascript">
+            document.getElementById("myButton").onclick = function () {
+                location.href = "https://nghinton.github.io/JaimieExperiment/CarDecisionMatrix.html";
+            };
+        </script>
+
+</html>

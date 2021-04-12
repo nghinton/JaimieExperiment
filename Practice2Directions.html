@@ -5,29 +5,9 @@
     <link rel="stylesheet" href="mlweb.css" type="text/css">
     </head>
     
-    <body onLoad="timefunction('onload','body','body')">
-    <!--BEGIN set vars--><script language="javascript">
-    //override defaults
-    mlweb_outtype="CSV";
-    mlweb_fname="mlwebform";
-    
-    chkFrm=true;
-    warningTxt="You must answer the question before proceeding!";
-    </SCRIPT>
-    <!--END set vars-->
-    
-    <FORM name="mlwebform" method="POST" onSubmit="" action="http://www.mouselabweb.org/mlwebmailer.php">
-    <INPUT type=hidden name="procdata" value="">
-    <!-- set all variables here -->
-    <input type=hidden name="expname" value="Practice2Question">
-    <input type=hidden name="nextURL" value="https://nghinton.github.io/JaimieExperiment/Practice2Matrix.html">
-    <input type=hidden name="to_email" value="nghinton@crimson.ua.edu">
-    <!--these will be set by the script -->
-    <input type=hidden name="subject" value="<?php echo($subject)?>">
-    <input type=hidden name="condnum" value="<?php echo($condnum)?>">
-    <!--BEGIN preHTML-->
+    <body>
+
     <h2>Practice Question 2: Restaurant Choice</h2>
-    <!--END preHTML--><!--BEGIN postHTML-->
     
     <p>Practice Scenario 2</p>
     <p>You are trying to choose a restaurant to go to with a group of friends. You are considering the following attributes:</p>
@@ -41,4 +21,14 @@
     
     <p>Please consider all information carefully, as all information provided here is important in making a good decision</p>
     
-    <!--END postHTML--><INPUT type="submit" value="Go To Decision Matrix"></FORM></body></html>
+    <button id="myButton" class="float-left submit-button" >Go To Decision Matrix</button>
+
+    </body>
+    
+    <script type="text/javascript">
+        document.getElementById("myButton").onclick = function () {
+            location.href = "https://nghinton.github.io/JaimieExperiment/Practice2Matrix.html";
+        };
+    </script>
+
+</html>
