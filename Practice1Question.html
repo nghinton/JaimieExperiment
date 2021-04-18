@@ -10,9 +10,12 @@
     //override defaults
     mlweb_outtype="CSV";
     mlweb_fname="mlwebform";
-    
     chkFrm=true;
     warningTxt="You must answer the question before proceeding!";
+
+    subjstr=document.cookie;
+	subject=subjstr.substr(subjstr.indexOf("mlweb_subject=")+14);
+
     </SCRIPT>
     <!--END set vars-->
     
