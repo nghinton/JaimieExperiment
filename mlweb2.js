@@ -102,6 +102,11 @@ function RecordEventData(objActionElement, objEvent)
 	
 function checkForm(formHandle)
 {
+	if (document.cookie.indexOf("mlweb_subject=")!=-1)
+		{
+		subjstr=document.cookie;
+		subject=subjstr.substr(subjstr.indexOf("mlweb_subject=")+14);
+		}
 if (chkFrm) 
 	{
 	noElm = document.forms[mlweb_fname].elements.length;
