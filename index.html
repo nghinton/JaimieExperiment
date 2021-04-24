@@ -7,6 +7,10 @@
 function startExp(formlink)
 {
 
+// get values from form
+subject = formlink.subject.value;
+condnum=parseInt(formlink.condnum.value);
+
 // enter the pagename of the MouselabWEB page below
 linkstr=""
   if (condnum === "1") {
@@ -16,10 +20,6 @@ linkstr=""
   } else {
     linkstr = "yellow/Practice1Directions.html";
   }
-
-// get values from form
-subject = formlink.subject.value;
-condnum=parseInt(formlink.condnum.value);
 
 // set cookies
 document.cookie="mlweb_condnum="+condnum+"; path=/";
