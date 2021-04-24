@@ -6,8 +6,16 @@
 <script language="javascript">
 function startExp(formlink)
 {
+
 // enter the pagename of the MouselabWEB page below
-linkstr = "purple/Practice1Directions.html";
+linkstr=""
+  if (condnum === "1") {
+    linkstr = "purple/Practice1Directions.html";
+  } else if (condum === "2") {
+    linkstr = "blue/Practice1Directions.html";
+  } else {
+    linkstr = "yellow/Practice1Directions.html";
+  }
 
 // get values from form
 subject = formlink.subject.value;

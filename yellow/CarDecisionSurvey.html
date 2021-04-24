@@ -1,0 +1,76 @@
+<HTML>
+    <HEAD>
+    <TITLE>MouselabWEB survey</TITLE>
+    <script language=javascript src="mlweb2.js"></SCRIPT>
+    <link rel="stylesheet" href="mlweb.css" type="text/css">
+    </head>
+    
+    <body onLoad="timefunction('onload','body','body')">
+    <!--BEGIN set vars--><script language="javascript">
+    //override defaults
+    mlweb_outtype="CSV";
+    mlweb_fname="mlwebform";
+    
+    chkFrm=true;
+    warningTxt="You must answer the survey before moving on!";
+    </SCRIPT>
+    <!--END set vars-->
+    
+    <FORM name="mlwebform" method="POST" onSubmit="return checkForm(this)" action="https://www.mouselabweb.org/mlwebmailer.php">
+    <INPUT type=hidden name="procdata" value="">
+    <!-- set all variables here -->
+    <input type=hidden name="expname" value="CarDecisionSurvey">
+    <input type=hidden name="nextURL" value="https://nghinton.github.io/JaimieExperiment/purple/StudentCharityDirections.html">
+    <input type=hidden name="to_email" value="nghinton@crimson.ua.edu">
+    <!--these will be set by the script -->
+    <input type=hidden name="subject" value="">
+    <input type=hidden name="condnum" value="">
+    <!--BEGIN preHTML-->
+    <h2>Question 1: Car Purchasing</h2>
+    <!--END preHTML--><!--BEGIN postHTML-->
+    
+    <h2>Survey Question</h2>
+    <p>How conflicted did you feel when making the decision just now?</p>
+
+    <!-- Begin HTML Scale: name=difficult-->
+    <table width="50%">
+        <tbody>
+            <tr>
+                <td width="15%" align="center">
+                    <input type="RADIO" name="difficult" value="1">
+                </td>
+                <td width="15%" align="center">
+                    <input type="RADIO" name="difficult" value="2">
+                </td>
+                <td width="15%" align="center">
+                    <input type="RADIO" name="difficult" value="3">
+                </td>
+                <td width="15%" align="center">
+                    <input type="RADIO" name="difficult" value="4">
+                </td>
+                <td width="15%" align="center">
+                    <input type="RADIO" name="difficult" value="5">
+                </td>
+            </tr>
+            <tr>
+                <td align="center">
+                    not at all <br>conflicted
+                </td>
+                <td align="center">
+
+                </td>
+                <td align="center">
+                    conflicted
+                </td>
+                <td align="center">
+
+                </td>
+                <td align="center">
+                    very <br>conflicted
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- End HTML Scale: name=difficult-->
+    
+    <!--END postHTML--><INPUT type="submit" value="Next Question"></FORM></body></html>
