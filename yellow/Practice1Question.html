@@ -12,10 +12,6 @@
     mlweb_fname="mlwebform";
     chkFrm=true;
     warningTxt="You must answer the question before proceeding!";
-
-    subjstr=document.cookie;
-	subject=subjstr.substr(subjstr.indexOf("mlweb_subject=")+14);
-
     </SCRIPT>
     <!--END set vars-->
     
@@ -26,7 +22,7 @@
     <input type=hidden name="nextURL" value="https://nghinton.github.io/JaimieExperiment/yellow/Practice1Survey.html">
     <input type=hidden name="to_email" value="nghinton@crimson.ua.edu">
     <!--these will be set by the script -->
-    <input type=hidden name="subject" value={subject}>
+    <input type=hidden name="subject" value="">
     <input type=hidden name="condnum" value="">
     <!--BEGIN preHTML-->
     <h2>Practice Question 1: Birthday Cake</h2>
