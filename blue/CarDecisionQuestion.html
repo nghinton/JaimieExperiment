@@ -1,38 +1,72 @@
-<HTML>
-    <HEAD>
-    <TITLE>MouselabWEB survey</TITLE>
-    <script language=javascript src="mlweb2.js"></SCRIPT>
-    <link rel="stylesheet" href="mlweb.css" type="text/css">
-    </head>
-    
-    <body onLoad="timefunction('onload','body','body')">
-    <!--BEGIN set vars--><script language="javascript">
-    //override defaults
-    mlweb_outtype="CSV";
-    mlweb_fname="mlwebform";
-    
-    chkFrm=true;
-    warningTxt="You must answer the question before proceeding!";
-    </SCRIPT>
+<html>
+  <head>
+    <title>MouselabWEB survey</title>
+    <script language="javascript" src="mlweb2.js"></script>
+    <link rel="stylesheet" href="mlweb.css" type="text/css" />
+  </head>
+
+  <body onLoad="timefunction('onload','body','body')">
+    <!--BEGIN set vars-->
+    <script language="javascript">
+      //override defaults
+      mlweb_outtype = "CSV";
+      mlweb_fname = "mlwebform";
+
+      chkFrm = true;
+      warningTxt = "You must answer the question before proceeding!";
+    </script>
     <!--END set vars-->
-    
-    <FORM name="mlwebform" method="POST" onSubmit="return checkForm(this)" action="https://www.mouselabweb.org/mlwebmailer.php">
-    <INPUT type=hidden name="procdata" value="">
-    <!-- set all variables here -->
-    <input type=hidden name="expname" value="CarDecisionQuestion">
-    <input type=hidden name="nextURL" value="https://nghinton.github.io/JaimieExperiment/blue/CarDecisionSurvey.html">
-    <input type=hidden name="to_email" value="nghinton@crimson.ua.edu">
-    <!--these will be set by the script -->
-    <input type=hidden name="subject" value="">
-    <input type=hidden name="condnum" value="">
-    <!--BEGIN preHTML-->
-    <h2>Question 1: Car Purchasing</h2>
-    <!--END preHTML--><!--BEGIN postHTML-->
-    
-    <h2>Decision Question</h2>
-    <p>Which car do you choose to buy?</p>
-    <!-- Begin HTML Scale: name=difficult-->
-    <TABLE><TR><td align=center><INPUT TYPE=RADIO NAME='q1' VALUE='A'></td><TD align=left>Car A</TD></TR><TR><td align=center><INPUT TYPE=RADIO NAME='q1' VALUE='B'></td><TD align=left>Car B</TD></TR><TR><td align=center><INPUT TYPE=RADIO NAME='q1' VALUE='C'></td><TD align=left>Car C</TD></TR><TR><td align=center><INPUT TYPE=RADIO NAME='q1' VALUE='D'></td><TD align=left>Car D</TD></TR><TR><td align=center><INPUT TYPE=RADIO NAME='q1' VALUE='E'></td><TD align=left>Car E</TD></TR></TABLE>
-    <!-- Begin HTML Scale: name=difficult-->
-    
-    <!--END postHTML--><INPUT type="submit" value="Go To Survey Question"></FORM></body></html>
+
+    <form
+      name="mlwebform"
+      method="POST"
+      onSubmit="return checkForm(this)"
+      action="https://www.mouselabweb.org/mlwebmailer.php"
+    >
+      <input type="hidden" name="procdata" value="" />
+      <!-- set all variables here -->
+      <input type="hidden" name="expname" value="CarDecisionQuestion" />
+      <input
+        type="hidden"
+        name="nextURL"
+        value="https://nghinton.github.io/JaimieExperiment/blue/CarDecisionSurvey.html"
+      />
+      <input type="hidden" name="to_email" value="jmchoi1@crimson.ua.edu" />
+      <!--these will be set by the script -->
+      <input type="hidden" name="subject" value="" />
+      <input type="hidden" name="condnum" value="" />
+      <!--BEGIN preHTML-->
+      <h2>Question 1: Car Purchasing</h2>
+      <!--END preHTML--><!--BEGIN postHTML-->
+
+      <h2>Decision Question</h2>
+      <p>Which car do you choose to buy?</p>
+      <!-- Begin HTML Scale: name=difficult-->
+      <table>
+        <tr>
+          <td align="center"><input type="RADIO" name="q1" value="A" /></td>
+          <td align="left">Car A</td>
+        </tr>
+        <tr>
+          <td align="center"><input type="RADIO" name="q1" value="B" /></td>
+          <td align="left">Car B</td>
+        </tr>
+        <tr>
+          <td align="center"><input type="RADIO" name="q1" value="C" /></td>
+          <td align="left">Car C</td>
+        </tr>
+        <tr>
+          <td align="center"><input type="RADIO" name="q1" value="D" /></td>
+          <td align="left">Car D</td>
+        </tr>
+        <tr>
+          <td align="center"><input type="RADIO" name="q1" value="E" /></td>
+          <td align="left">Car E</td>
+        </tr>
+      </table>
+      <!-- Begin HTML Scale: name=difficult-->
+
+      <!--END postHTML--><input type="submit" value="Go To Survey Question" />
+    </form>
+  </body>
+</html>

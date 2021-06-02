@@ -1,52 +1,64 @@
 <html>
 <head>
-<title>Mouselab WEB</title>
-<link rel="stylesheet" href="mlweb.css" type="text/css">
-
-<script language="javascript">
-function startExp(formlink)
-{
-
-// get values from form
-subject = formlink.subject.value;
-condnum=parseInt(formlink.condnum.value);
-
-// enter the pagename of the MouselabWEB page below
-linkstr=""
-  if (condnum === 1) {
-    linkstr = "purple/Practice1Directions.html";
-  } else if (condnum === 2) {
-    linkstr = "blue/Practice1Directions.html";
-  } else {
-    linkstr = "yellow/Practice1Directions.html";
-  }
-
-// set cookies
-document.cookie="mlweb_condnum="+condnum+"; path=/";
-document.cookie="mlweb_subject="+subject+"; path=/";
-
-var newWind = window.location.href = linkstr;
-
-//var newWind=window.open(linkstr,"survey","height="+(screen.availHeight-60).toString()+",width="+(screen.availWidth-30).toString() +",scrollbars,status,resizable, left=2, top=2")
-
-}
-</script>
+  <title>Mouselab WEB</title>
+  <link rel="stylesheet" href="mlweb.css" type="text/css">
 </head>
+
 <body> 
-<h1>Start of experiment</h1>
-<p></p>
 
-<p>In this questionnaire, you will be asked to make choices between several alternatives.</p>
-<p>The attributes of these products will be hidden behind boxes. You can look at the attributes by clicking the mouse pointer on the box. The box will open and you can see the information, until you click another box.</p>
-<p>The following practice task is designed to help you become familiar with clicking the mouse on the boxes to view specific information. Look at the information in the boxes, and when you are ready, please click the button that says “make decision”, to indicate your decision.</p>
-<p>Let’s start practice trials.</p>
+  <h1>Individual’s Consent to be in a Research Study</h1>
+  <p>You are being asked to be in a research study. This study is called “Decision-Making Study.” This study is being done by a doctoral student Jaimie Choi in the Department of Psychology at the University of Alabama.  </p>
 
-<p></p>
-<form>
-  <TABLE><TR><TD>Subject name:</TD><TD><input name="subject" type="text" id="subject"></TD></TR>
-      <TR><TD>Worker ID:</TD><TD><input name="condnum" type="text" id="condnum" size="10"></TD></TR> 
-  <TR><TD colspan=2><input type="button" name="Button" value="Start Experiment" onClick="startExp(this.form)"></TD></TR></TABLE>
-</form>
+  <h2>What is this study about? </h2>
+  <p>This is a research study investigating the decision-making process when an individual is faced with two options, and what kind of cognitive functions are related to one’s decision-making process.</p>
+
+  <h2>Why is this study important?—What good will the results do? </h2>
+  <p>This study will help us understand how people of different age make decisions. </p>
+  
+  <h2>Why have I been asked to take part in this study? </h2>
+  <p>You are either in age group of 18 – 30, or 55+ years old.</p>
+  
+  <h2>How many other people will be in this study? </h2>
+  <p>We expect to have 120 participants.</p>
+  
+  <h2>What will I be asked to do in this study?</h2>
+  <p>You will read several decision-making scenarios (e.g., choose a best pen). After each statement you will receive a matrix that includes various information regarding available options. You will be asked to navigate the matrix to gain pertinent information in order to make a decision. You will then answer some questions about your decisions. Then you will complete 3 cognitive tasks and answer a series of survey questions. </p>
+  
+  <h2>How much time will I spend being in this study? </h2>
+  <p>The study will take no more than 1 hour. You may take breaks between various tasks. </p>
+  
+  <h2>Will being in this study cost me anything?</h2>
+  <p>The only cost to you from this study is your time.</p>
+  
+  <h2>Will I be compensated for being in this study?</h2>
+  <p>You will receive 6 dollars for your time.</p>
+  
+  <h2>What are the risks (problems or dangers) from being this study?</h2>
+  <p>You may experience mild frustration and fatigue as you evaluate options and come to a final decision. </p>
+  
+  <h2>What are the benefits of being in this study?</h2>
+  <p>Individual benefits to the participants include a greater sense of self by helping researchers to gain knowledge about the process of making decisions within different contexts. Moreover, by understanding more about decision-making in individuals with varying age, you are contributing to the society by helping to find out a better way of presenting information depending on the age of decision-makers.</p>
+  
+  <h2>How will my privacy be protected? </h2>
+  <p>You will be able to complete the tasks online at the comfort of your home, where you can provide your own privacy.</p>
+  
+  <h2>How will my confidentiality be protected?</h2>
+  <p>The only place where your name appears in connection with this study is on this informed consent form. Your name will not be linked to your data in any way. All data will be stored on a password-protected computer or in a locked cabinet that can be accessed by the researchers of this project only. We will write research articles on this study but participants will be identified only at the group level; for example, “There were 120 participants (x% women).” </p>
+  
+  <h2>What are the alternatives to being in this study?</h2>
+  <p>You may choose to withdraw from the study.</p>
+  
+  <h2>What are my rights as a participant?</h2>
+  <p>Your participation is completely voluntary and the decision to participate is entirely your own. You may withdraw at any time. However, you may not receive the full amount of compensation if you withdraw before the end of the study. Not participating or stopping participation will have no effect on your relationships with the University of Alabama. </p>
+  <p>The University of Alabama Institutional Review Board is a committee that looks out for the ethical treatment of people in research studies. They may review the study records if they wish.  This is to be sure that people in research studies are being treated fairly and that the study is being carried out as planned. </p>
+  
+  <h2>Who do I call if I have questions or problems?</h2>
+  <p>If you have any questions or concerns before or after completing this research project please contact Jaimie Choi at jmchoi1@crimson.ua.edu, or Dr. Sheila Black at sblack@ua.edu.  If you have questions about your rights as a research participant you may contact Ms. Tanta Myles, the University of Alabama Research Compliance Officer, at 205-348-8461 or toll-free at 1-877-820-3066-348-5152. </p>
+  <p>You  may  also  ask  questions,  make  suggestions,  or  file  complaints  and  concerns  through the  IRB Outreach  website  at  http://ovpred.ua.edu/research-compliance/prco/, or  email  the  Research Compliance  office  at  participantoutreach@ua.edu.</p>
+  <p>By clicking “I agree” below you are indicating that you are at least 18 years old, have read this consent form and agree to participate in this research study. Please print a copy of this page for your records.</p>
+
+
+  <button href="https://nghinton.github.io/JaimieExperiment/startPage.html">I agree</button>
 
 </body>
 </html>

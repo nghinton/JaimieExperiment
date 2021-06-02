@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>Mouselab WEB</title>
+<link rel="stylesheet" href="mlweb.css" type="text/css">
+
+<script language="javascript">
+function startExp(formlink)
+{
+
+// get values from form
+subject = formlink.subject.value;
+condnum=parseInt(formlink.condnum.value);
+
+// enter the pagename of the MouselabWEB page below
+linkstr=""
+  if (condnum === 1) {
+    linkstr = "purple/Practice1Directions.html";
+  } else if (condnum === 2) {
+    linkstr = "blue/Practice1Directions.html";
+  } else {
+    linkstr = "yellow/Practice1Directions.html";
+  }
+
+// set cookies
+document.cookie="mlweb_condnum="+condnum+"; path=/";
+document.cookie="mlweb_subject="+subject+"; path=/";
+
+var newWind = window.location.href = linkstr;
+
+//var newWind=window.open(linkstr,"survey","height="+(screen.availHeight-60).toString()+",width="+(screen.availWidth-30).toString() +",scrollbars,status,resizable, left=2, top=2")
+
+}
+</script>
+</head>
+<body> 
+<h1>Start of experiment</h1>
+<p></p>
+
+<p>In this questionnaire, you will be asked to make choices between several alternatives.</p>
+<p>The attributes of these products will be hidden behind boxes. You can look at the attributes by clicking the mouse pointer on the box. The box will open and you can see the information, until you click another box.</p>
+<p>The following practice task is designed to help you become familiar with clicking the mouse on the boxes to view specific information. Look at the information in the boxes, and when you are ready, please click the button that says “make decision”, to indicate your decision.</p>
+<p>Let’s start practice trials.</p>
+
+<p></p>
+<form>
+  <TABLE><TR><TD>Subject name:</TD><TD><input name="subject" type="text" id="subject"></TD></TR>
+      <TR><TD>Worker ID:</TD><TD><input name="condnum" type="text" id="condnum" size="10"></TD></TR> 
+  <TR><TD colspan=2><input type="button" name="Button" value="Start Experiment" onClick="startExp(this.form)"></TD></TR></TABLE>
+</form>
+
+</body>
+</html>
