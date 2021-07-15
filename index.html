@@ -72,9 +72,18 @@
   <p>You  may  also  ask  questions,  make  suggestions,  or  file  complaints  and  concerns  through the  IRB Outreach  website  at  http://ovpred.ua.edu/research-compliance/prco/, or  email  the  Research Compliance  office  at  participantoutreach@ua.edu.</p>
   <p>By clicking “I agree” below you are indicating that you are at least 18 years old, have read this consent form and agree to participate in this research study. Please print a copy of this page for your records.</p>
   
-  
-
-  <a href="https://nghinton.github.io/JaimieExperiment/startPage.html" class="button">I agree</a>
+  <button id="DisagreeButton" class="float-left submit-button myButton" >I Do Not Agree</button>  
+  <button id="AgreeButton" class="float-left submit-button myButton" >I Agree</button>
 
 </body>
+
+<script type="text/javascript">
+  document.getElementById("DisagreeButton").onclick = function () {
+    location.href = "https://nghinton.github.io/JaimieExperiment/goodbye.html";
+  };
+  document.getElementById("AgreeButton").onclick = function () {
+    location.href = "https://nghinton.github.io/JaimieExperiment/startPage.html";
+  };
+</script>
+
 </html>
